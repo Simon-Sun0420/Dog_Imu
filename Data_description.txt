@@ -1,0 +1,77 @@
+Data description
+
+DogInfo.csv
+- Information about the dogs in a comma separated text file with six columns.
+
+Column name  	    Description
+--------------------------------
+DogID	            Number of individual dogs
+Breed	            Breed of the dog
+Weight	            Weight of the dog
+Age months          Age of the dog in months
+Gender	            Gender of the dog: 1 = female, 2 = male
+Neutering Status    Neutering Status of the dog: 0 = non-neutered, 1 = neutered
+
+################
+Measurement data in text file
+
+DogMoveData.csv
+- Contains all the data 10611068 rows, 20 columns.
+
+Column name  	    Description
+--------------------------------
+DogID               Number ID of the dog
+TestNum             Number of the test {1, 2}
+t_sec               Time from the start of the test in seconds
+ABack_x             Accelerometer measurement from the sensor in the back, x-axis
+ABack_y             Accelerometer measurement from the sensor in the back, y-axis     
+ABack_z             Accelerometer measurement from the sensor in the back, z-axis     
+ANeck_y             Accelerometer measurement from the sensor in the neck, x-axis
+ANeck_x             Accelerometer measurement from the sensor in the neck, y-axis
+ANeck_z             Accelerometer measurement from the sensor in the neck, z-axis
+GBack_x             Gyroscope measurement from the sensor in the back, x-axis
+GBack_y             Gyroscope measurement from the sensor in the back, y-axis
+GBack_z             Gyroscope measurement from the sensor in the back, z-axis
+GNeck_x             Gyroscope measurement from the sensor in the neck, x-axis
+GNeck_y             Gyroscope measurement from the sensor in the neck, y-axis
+GNeck_z             Gyroscope measurement from the sensor in the neck, z-axis
+Task                The task given at the time, <undefined> when no task is being performed
+Behavior_1          Annotated behavior 1, maximum of three simultaneous annotations at the same time
+Behavior_2          Annotated behavior 2, maximum of three simultaneous annotations at the same time
+Behavior_3          Annotated behavior 3, maximum of three simultaneous annotations at the same time
+PointEvent          Short events annotated separately, Bark for example.
+
+
+################
+Measurement data in MATLAB data file
+
+DogMoveData.mat
+- Contains one variable DogMoveData; a table with 63 rows and following columns.
+Column	    Data type	            Description
+-----------------------------------------------
+DogID	    Int32	                Number of the dog
+TestNum	    Int32	                Number of the test {1, 2}
+sensorData	Cell array of tables	Each table contains the measurement data from one recorded test at 100Hz sampling rate. The descriptions of the columns are in the following table.
+
+The data types and descriptions of the columns of the sensorData.
+Column	    Data type	    Description
+---------------------------------------
+ABack	    double	        Accelerator measurement from the sensor in the back. A matrix with three columns for x, y and z directions.
+ANeck	    double	        Accelerator measurement from the sensor in the neck. A matrix with three columns for x, y and z directions.
+GBack	    double	        Gyroscope measurement from the sensor in the back. A matrix with three columns for x, y and z directions.
+GNeck	    double	        Gyroscope measurement from the sensor in the neck. A matrix with three columns for x, y and z directions.
+Task	    categorical	    The task given at the time, <undefined> when no task is being performed.
+Behavior	categorical	    Three column array of the annotated behavior, maximum of three simultaneous annotations at the same time
+PointEvent	categorical	    Short events annotated separately, Bark for example.
+
+MATLAB example for accessing the data from row 15:
+% Dog ID:
+>> id = DogMoveData.DogID(15)
+id =
+  int32
+   27
+% Accelerometer data of the back sensor:
+>> x = DogMoveData.sensorData{15}.ABack;
+>> whos x
+  Name           Size              Bytes  Class     Attributes
+  x         171168x3             4108032  double              
