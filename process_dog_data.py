@@ -100,21 +100,9 @@ def collect_behavior_names(df: pd.DataFrame) -> List[str]:
     for col in BEHAVIOR_COLUMNS:
         if col not in df:
             continue
-        behaviors.update(
-            sanitize_behavior(val) for val in df[col].dropna().unique()
-        )
+        behaviors.update(sanitize_behavior(val) for val in df[col].dropna().unique())
     behaviors.discard(None)
     return sorted(behaviors)
-
-
-def row_has_behavior(row: pd.Series, target: str) -> bool:
-    """Check if any behaviour column matches target."""
-    for col in BEHAVIOR_COLUMNS:
-        if col not in row:
-            continue
-        if sanitize_behavior(row[col]) == target:
-            return True
-    return False
 
 
 def trimmed_mean_offset(values: np.ndarray) -> np.ndarray:
@@ -159,7 +147,7 @@ def ecdf_quantiles(signal_axis: np.ndarray) -> List[float]:
 def compute_modal_features(signal: np.ndarray, prefix: str) -> Dict[str, float]:
     """Compute engineered features for either accelerometer or gyro."""
     means = signal.mean(axis=0)
-    total_activity = float(np.sum(signal.std(axis=0, ddof=0)))
+    total_activity = float(np.sum(np.std(signal, axis=0, ddof=0)))
     offset = float(np.linalg.norm(means))
     peak_rates = [count_peak_rate(signal[:, i], means[i]) for i in range(3)]
     ecdf_values = []
@@ -200,6 +188,19 @@ BACK_FEATURE_ORDER = (
     build_feature_template("A")
     + build_feature_template("G")
 )
+
+
+def compute_behavior_percentages(segment: pd.DataFrame, behavior_vocab: List[str]) -> Dict[str, float]:
+    """Replicate CollectFeatures.m behaviour aggregation."""
+    counts = {beh: 0 for beh in behavior_vocab}
+    for col in BEHAVIOR_COLUMNS:
+        if col not in segment:
+            continue
+        vc = segment[col].value_counts()
+        for beh, cnt in vc.items():
+            if beh in counts:
+                counts[beh] += int(cnt)
+    return {beh: 100.0 * counts[beh] / float(WINDOW_LEN) for beh in counts}
 
 
 # ---------------------------------------------------------------------------
@@ -254,23 +255,7 @@ def extract_window_features(
             task_series = segment["Task"].dropna()
             task_label = task_series.iloc[0] if not task_series.empty else None
 
-            behavior_counts: Dict[str, float] = {beh: 0.0 for beh in behavior_vocab}
-            main_behavior_col = segment[BEHAVIOR_COLUMNS[0]] if BEHAVIOR_COLUMNS[0] in segment else None
-            if main_behavior_col is not None:
-                counts = main_behavior_col.value_counts()
-                for beh, cnt in counts.items():
-                    if beh in behavior_counts:
-                        behavior_counts[beh] = 100.0 * cnt / WINDOW_LEN
-            else:
-                # fall back to all columns combined
-                combined = []
-                for col in BEHAVIOR_COLUMNS:
-                    if col in segment:
-                        combined.extend(segment[col].dropna().tolist())
-                counts = pd.Series(combined).value_counts()
-                for beh, cnt in counts.items():
-                    if beh in behavior_counts:
-                        behavior_counts[beh] = 100.0 * cnt / WINDOW_LEN
+            behavior_counts: Dict[str, float] = compute_behavior_percentages(segment, behavior_vocab)
 
             a_back = segment[["ABack_x", "ABack_y", "ABack_z"]].to_numpy(dtype=np.float32)
             g_back = segment[["GBack_x", "GBack_y", "GBack_z"]].to_numpy(dtype=np.float32)
@@ -366,6 +351,7 @@ def main():
     print("Loading DogMoveData.csv ...")
     df = load_and_prepare()
     behavior_vocab = collect_behavior_names(df)
+    behavior_vocab = sorted(set(behavior_vocab).union(TARGET_BEHAVIORS))
     if not behavior_vocab:
         raise RuntimeError("No behaviour annotations found in the dataset.")
 
