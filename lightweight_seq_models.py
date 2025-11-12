@@ -131,7 +131,9 @@ def standardize(train: np.ndarray, test: np.ndarray) -> Tuple[np.ndarray, np.nda
 class TCNBlock(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, dilation, dropout):
         super().__init__()
-        padding = (kernel_size - 1) * dilation
+        if kernel_size % 2 == 0:
+            raise ValueError("kernel_size must be odd to preserve sequence length.")
+        padding = dilation * ((kernel_size - 1) // 2)
         self.net = nn.Sequential(
             nn.Conv1d(in_channels, out_channels, kernel_size, padding=padding, dilation=dilation),
             nn.LeakyReLU(0.01),
@@ -146,7 +148,6 @@ class TCNBlock(nn.Module):
 
     def forward(self, x):
         out = self.net(x)
-        out = out[:, :, :-self.net[0].padding[0]]  # trim padding
         out = out + self.downsample(x)
         return nn.functional.leaky_relu(out, 0.01)
 
@@ -385,7 +386,8 @@ def main():
             df[col] = df[col].apply(sanitize_behavior)
 
     sensors = parse_list(args.sensors, ["Back", "Neck"])
-    scenarios = [key for key in SCENARIOS if SCENARIOS[key]["label"] in parse_list(args.scenarios, ["A+G", "A only"])]
+    scenario_keys_requested = parse_list(args.scenarios, list(SCENARIOS.keys()))
+    scenarios = [key for key in SCENARIOS if key in scenario_keys_requested]
 
     base_dir = Path("results_raw") / args.run_name
     summary_csv = base_dir / "model_summary.csv"
@@ -415,13 +417,14 @@ def main():
             save_confusion(sensor, scenario_key, args.model, classes, true_all, pred_all, base_dir)
             save_report(sensor, scenario_key, args.model, classes, true_all, pred_all, base_dir)
 
+            scenario_label = SCENARIOS[scenario_key]["label"]
             summary_rows.append(
                 {
                     "sensor": sensor,
-                    "scenario": SCENARIOS[scenario_key]["label"],
+                    "scenario": scenario_label,
                     "model": args.model,
                     "num_features": windows.shape[2] * WINDOW_LEN,
-                    "selected_features": f"raw_{SCENARIOS[scenario_key]['label']}",
+                    "selected_features": f"raw_{scenario_label}",
                     "accuracy": acc,
                     "f1_macro": f1,
                 }
@@ -430,7 +433,7 @@ def main():
                 dog_rows.append(
                     {
                         "sensor": sensor,
-                        "scenario": SCENARIOS[scenario_key]["label"],
+                        "scenario": scenario_label,
                         "model": args.model,
                         "dog_id": dog,
                         "accuracy": dog_acc,
