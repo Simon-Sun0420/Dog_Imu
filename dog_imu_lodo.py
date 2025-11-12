@@ -288,6 +288,8 @@ def zscore_matrix(matrix: np.ndarray) -> np.ndarray:
 
 def run_sensor_pipeline(sensor: str, sensor_df: pd.DataFrame, labels: pd.Series, dog_ids: pd.Series) -> None:
     for scenario_key, scenario_cfg in SCENARIOS.items():
+        if not (sensor == "Neck" and scenario_key == "ACC"):
+            continue
         scenario_label = scenario_cfg["label"]
         scenario_cols = [col for col in sensor_df.columns if scenario_cfg["feature_filter"](col)]
         if not scenario_cols:
@@ -318,8 +320,8 @@ def run_sensor_pipeline(sensor: str, sensor_df: pd.DataFrame, labels: pd.Series,
         )
 
         models = {
-            "LDA": LinearDiscriminantAnalysis(),
-            "QDA": QuadraticDiscriminantAnalysis(),
+            #"LDA": LinearDiscriminantAnalysis(),
+            #"QDA": QuadraticDiscriminantAnalysis(),
             "SVM": SVC(kernel="rbf", gamma="scale", C=1.0, decision_function_shape="ovo"),
         }
         if tree_leaf:

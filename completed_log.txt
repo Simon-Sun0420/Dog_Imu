@@ -1,0 +1,935 @@
+
+=== Sensor: Back | Scenario: A+G ===
+ReliefF candidate pool size: 22
+  Optimal tree max_leaf_nodes=80 (cv acc=0.903)
+
+Selecting features for LDA ...
+  Step 1: evaluating 22 candidates
+    Selected feature index 17 (score=0.714)
+  Step 2: evaluating 21 candidates
+    Selected feature index 0 (score=0.856)
+  Step 3: evaluating 20 candidates
+    Selected feature index 24 (score=0.875)
+  Step 4: evaluating 19 candidates
+    Selected feature index 27 (score=0.879)
+  Step 5: evaluating 18 candidates
+    Selected feature index 19 (score=0.883)
+  Step 6: evaluating 17 candidates
+    Selected feature index 4 (score=0.886)
+  Step 7: evaluating 16 candidates
+    Selected feature index 20 (score=0.889)
+  Step 8: evaluating 15 candidates
+    Selected feature index 21 (score=0.890)
+  Step 9: evaluating 14 candidates
+    Selected feature index 3 (score=0.892)
+  Step 10: evaluating 13 candidates
+    Selected feature index 41 (score=0.893)
+    Reached MAX_SELECTED_FEATURES=10; stopping search.
+Selected 10 features: ['AY5', 'ATotAct', 'AZ5', 'GTotAct', 'AY7', 'AOffset', 'AZ1', 'AZ2', 'AMeanZ', 'GY2']
+Back [A+G] - LDA: Acc=0.893, F1_macro=0.900
+Per-dog accuracy:
+  Dog 16: 0.942
+  Dog 18: 0.890
+  Dog 19: 0.775
+  Dog 20: 0.892
+  Dog 21: 0.888
+  Dog 22: 0.891
+  Dog 23: 0.961
+  Dog 25: 0.971
+  Dog 26: 0.959
+  Dog 27: 0.949
+  Dog 28: 0.942
+  Dog 29: 0.847
+  Dog 30: 0.771
+  Dog 33: 0.812
+  Dog 34: 0.895
+  Dog 36: 0.951
+  Dog 39: 0.832
+  Dog 41: 0.973
+  Dog 43: 0.977
+  Dog 44: 0.820
+  Dog 45: 0.908
+  Dog 46: 0.887
+  Dog 47: 0.837
+  Dog 48: 0.953
+  Dog 49: 0.807
+  Dog 51: 0.574
+  Dog 52: 0.795
+  Dog 53: 0.883
+  Dog 54: 0.960
+  Dog 55: 0.820
+  Dog 56: 0.980
+  Dog 57: 0.854
+  Dog 58: 0.964
+  Dog 59: 0.969
+  Dog 60: 0.986
+  Dog 61: 0.815
+  Dog 63: 0.928
+  Dog 65: 0.998
+  Dog 66: 0.734
+  Dog 67: 0.892
+  Dog 68: 0.826
+  Dog 70: 0.806
+  Dog 72: 0.985
+  Dog 73: 0.994
+  Dog 74: 0.931
+
+Selecting features for QDA ...
+  Step 1: evaluating 22 candidates
+    Selected feature index 17 (score=0.738)
+  Step 2: evaluating 21 candidates
+    Selected feature index 0 (score=0.877)
+  Step 3: evaluating 20 candidates
+    Selected feature index 20 (score=0.887)
+  Step 4: evaluating 19 candidates
+    Selected feature index 4 (score=0.898)
+  Step 5: evaluating 18 candidates
+    Selected feature index 5 (score=0.899)
+  Step 6: evaluating 17 candidates
+Selected 5 features: ['AY5', 'ATotAct', 'AZ1', 'AOffset', 'ANMeanCros']
+Back [A+G] - QDA: Acc=0.899, F1_macro=0.889
+Per-dog accuracy:
+  Dog 16: 0.964
+  Dog 18: 0.937
+  Dog 19: 0.773
+  Dog 20: 0.909
+  Dog 21: 0.886
+  Dog 22: 0.901
+  Dog 23: 0.980
+  Dog 25: 0.961
+  Dog 26: 0.930
+  Dog 27: 0.979
+  Dog 28: 0.976
+  Dog 29: 0.874
+  Dog 30: 0.848
+  Dog 33: 0.789
+  Dog 34: 0.897
+  Dog 36: 0.920
+  Dog 39: 0.694
+  Dog 41: 0.842
+  Dog 43: 0.978
+  Dog 44: 0.962
+  Dog 45: 0.911
+  Dog 46: 0.886
+  Dog 47: 0.866
+  Dog 48: 0.946
+  Dog 49: 0.843
+  Dog 51: 0.716
+  Dog 52: 0.785
+  Dog 53: 0.883
+  Dog 54: 0.951
+  Dog 55: 0.848
+  Dog 56: 0.994
+  Dog 57: 0.878
+  Dog 58: 0.946
+  Dog 59: 0.938
+  Dog 60: 0.960
+  Dog 61: 0.960
+  Dog 63: 0.903
+  Dog 65: 0.988
+  Dog 66: 0.756
+  Dog 67: 0.895
+  Dog 68: 0.910
+  Dog 70: 0.768
+  Dog 72: 0.985
+  Dog 73: 0.951
+  Dog 74: 0.918
+
+Selecting features for SVM ...
+  Using 23/45 folds for SVM feature selection (fraction=0.50)
+  Step 1: evaluating 12 candidates
+    Selected feature index 17 (score=0.743)
+  Step 2: evaluating 11 candidates
+    Selected feature index 0 (score=0.875)
+  Step 3: evaluating 10 candidates
+    Selected feature index 4 (score=0.899)
+  Step 4: evaluating 9 candidates
+    Selected feature index 21 (score=0.909)
+  Step 5: evaluating 8 candidates
+    Selected feature index 27 (score=0.919)
+  Step 6: evaluating 7 candidates
+    Selected feature index 25 (score=0.923)
+  Step 7: evaluating 6 candidates
+    Selected feature index 34 (score=0.926)
+  Step 8: evaluating 5 candidates
+Selected 7 features: ['AY5', 'ATotAct', 'AOffset', 'AZ2', 'GTotAct', 'AZ6', 'GX2']
+Back [A+G] - SVM: Acc=0.933, F1_macro=0.928
+Per-dog accuracy:
+  Dog 16: 0.973
+  Dog 18: 0.991
+  Dog 19: 0.888
+  Dog 20: 0.933
+  Dog 21: 0.923
+  Dog 22: 0.945
+  Dog 23: 0.961
+  Dog 25: 0.965
+  Dog 26: 0.986
+  Dog 27: 0.983
+  Dog 28: 0.975
+  Dog 29: 0.955
+  Dog 30: 0.824
+  Dog 33: 0.879
+  Dog 34: 0.977
+  Dog 36: 0.964
+  Dog 39: 0.815
+  Dog 41: 0.967
+  Dog 43: 0.979
+  Dog 44: 0.866
+  Dog 45: 0.902
+  Dog 46: 0.977
+  Dog 47: 0.945
+  Dog 48: 0.968
+  Dog 49: 0.859
+  Dog 51: 0.711
+  Dog 52: 0.795
+  Dog 53: 0.978
+  Dog 54: 0.965
+  Dog 55: 0.866
+  Dog 56: 0.992
+  Dog 57: 0.907
+  Dog 58: 0.954
+  Dog 59: 0.959
+  Dog 60: 0.963
+  Dog 61: 0.972
+  Dog 63: 0.924
+  Dog 65: 0.975
+  Dog 66: 0.782
+  Dog 67: 0.910
+  Dog 68: 0.953
+  Dog 70: 0.853
+  Dog 72: 0.993
+  Dog 73: 0.996
+  Dog 74: 0.972
+
+Selecting features for Tree ...
+  Step 1: evaluating 22 candidates
+    Selected feature index 17 (score=0.754)
+  Step 2: evaluating 21 candidates
+    Selected feature index 0 (score=0.877)
+  Step 3: evaluating 20 candidates
+    Selected feature index 4 (score=0.891)
+  Step 4: evaluating 19 candidates
+    Selected feature index 25 (score=0.903)
+  Step 5: evaluating 18 candidates
+    Selected feature index 41 (score=0.906)
+  Step 6: evaluating 17 candidates
+    Selected feature index 3 (score=0.907)
+  Step 7: evaluating 16 candidates
+    Selected feature index 26 (score=0.909)
+  Step 8: evaluating 15 candidates
+    Selected feature index 19 (score=0.909)
+  Step 9: evaluating 14 candidates
+Selected 8 features: ['AY5', 'ATotAct', 'AOffset', 'AZ6', 'GY2', 'AMeanZ', 'AZ7', 'AY7']
+Back [A+G] - Tree: Acc=0.909, F1_macro=0.913
+Per-dog accuracy:
+  Dog 16: 0.948
+  Dog 18: 0.959
+  Dog 19: 0.877
+  Dog 20: 0.893
+  Dog 21: 0.909
+  Dog 22: 0.933
+  Dog 23: 0.944
+  Dog 25: 0.937
+  Dog 26: 0.977
+  Dog 27: 0.988
+  Dog 28: 0.977
+  Dog 29: 0.960
+  Dog 30: 0.787
+  Dog 33: 0.841
+  Dog 34: 0.919
+  Dog 36: 0.961
+  Dog 39: 0.744
+  Dog 41: 0.946
+  Dog 43: 0.973
+  Dog 44: 0.881
+  Dog 45: 0.906
+  Dog 46: 0.917
+  Dog 47: 0.911
+  Dog 48: 0.950
+  Dog 49: 0.839
+  Dog 51: 0.686
+  Dog 52: 0.765
+  Dog 53: 0.929
+  Dog 54: 0.930
+  Dog 55: 0.830
+  Dog 56: 0.994
+  Dog 57: 0.911
+  Dog 58: 0.953
+  Dog 59: 0.934
+  Dog 60: 0.971
+  Dog 61: 0.869
+  Dog 63: 0.843
+  Dog 65: 0.994
+  Dog 66: 0.762
+  Dog 67: 0.875
+  Dog 68: 0.948
+  Dog 70: 0.793
+  Dog 72: 0.968
+  Dog 73: 0.992
+  Dog 74: 0.957
+
+=== Sensor: Back | Scenario: A only ===
+ReliefF candidate pool size: 16
+  Optimal tree max_leaf_nodes=140 (cv acc=0.903)
+
+Selecting features for LDA ...
+  Step 1: evaluating 16 candidates
+    Selected feature index 17 (score=0.714)
+  Step 2: evaluating 15 candidates
+    Selected feature index 0 (score=0.856)
+  Step 3: evaluating 14 candidates
+    Selected feature index 24 (score=0.875)
+  Step 4: evaluating 13 candidates
+    Selected feature index 4 (score=0.878)
+  Step 5: evaluating 12 candidates
+    Selected feature index 20 (score=0.883)
+  Step 6: evaluating 11 candidates
+    Selected feature index 21 (score=0.886)
+  Step 7: evaluating 10 candidates
+    Selected feature index 3 (score=0.888)
+  Step 8: evaluating 9 candidates
+    Selected feature index 18 (score=0.889)
+    Reached MAX_SELECTED_FEATURES=8; stopping search.
+Selected 8 features: ['AY5', 'ATotAct', 'AZ5', 'AOffset', 'AZ1', 'AZ2', 'AMeanZ', 'AY6']
+Back [A only] - LDA: Acc=0.889, F1_macro=0.897
+Per-dog accuracy:
+  Dog 16: 0.923
+  Dog 18: 0.880
+  Dog 19: 0.772
+  Dog 20: 0.886
+  Dog 21: 0.888
+  Dog 22: 0.887
+  Dog 23: 0.960
+  Dog 25: 0.966
+  Dog 26: 0.962
+  Dog 27: 0.946
+  Dog 28: 0.943
+  Dog 29: 0.843
+  Dog 30: 0.771
+  Dog 33: 0.812
+  Dog 34: 0.890
+  Dog 36: 0.969
+  Dog 39: 0.823
+  Dog 41: 0.972
+  Dog 43: 0.979
+  Dog 44: 0.822
+  Dog 45: 0.905
+  Dog 46: 0.884
+  Dog 47: 0.836
+  Dog 48: 0.946
+  Dog 49: 0.778
+  Dog 51: 0.576
+  Dog 52: 0.794
+  Dog 53: 0.880
+  Dog 54: 0.951
+  Dog 55: 0.821
+  Dog 56: 0.977
+  Dog 57: 0.853
+  Dog 58: 0.964
+  Dog 59: 0.963
+  Dog 60: 0.980
+  Dog 61: 0.788
+  Dog 63: 0.928
+  Dog 65: 0.998
+  Dog 66: 0.737
+  Dog 67: 0.893
+  Dog 68: 0.822
+  Dog 70: 0.811
+  Dog 72: 0.982
+  Dog 73: 0.993
+  Dog 74: 0.918
+
+Selecting features for QDA ...
+  Step 1: evaluating 16 candidates
+    Selected feature index 17 (score=0.738)
+  Step 2: evaluating 15 candidates
+    Selected feature index 0 (score=0.877)
+  Step 3: evaluating 14 candidates
+    Selected feature index 1 (score=0.897)
+  Step 4: evaluating 13 candidates
+    Selected feature index 21 (score=0.903)
+  Step 5: evaluating 12 candidates
+    Selected feature index 5 (score=0.905)
+  Step 6: evaluating 11 candidates
+    Selected feature index 22 (score=0.906)
+  Step 7: evaluating 10 candidates
+Selected 6 features: ['AY5', 'ATotAct', 'AMeanX', 'AZ2', 'ANMeanCros', 'AZ3']
+Back [A only] - QDA: Acc=0.906, F1_macro=0.899
+Per-dog accuracy:
+  Dog 16: 0.960
+  Dog 18: 0.983
+  Dog 19: 0.787
+  Dog 20: 0.894
+  Dog 21: 0.911
+  Dog 22: 0.944
+  Dog 23: 0.972
+  Dog 25: 0.963
+  Dog 26: 0.979
+  Dog 27: 0.945
+  Dog 28: 0.959
+  Dog 29: 0.916
+  Dog 30: 0.773
+  Dog 33: 0.826
+  Dog 34: 0.896
+  Dog 36: 0.957
+  Dog 39: 0.752
+  Dog 41: 0.958
+  Dog 43: 0.979
+  Dog 44: 0.805
+  Dog 45: 0.860
+  Dog 46: 0.942
+  Dog 47: 0.907
+  Dog 48: 0.956
+  Dog 49: 0.824
+  Dog 51: 0.720
+  Dog 52: 0.782
+  Dog 53: 0.966
+  Dog 54: 0.946
+  Dog 55: 0.859
+  Dog 56: 0.994
+  Dog 57: 0.884
+  Dog 58: 0.953
+  Dog 59: 0.950
+  Dog 60: 0.964
+  Dog 61: 0.865
+  Dog 63: 0.898
+  Dog 65: 0.991
+  Dog 66: 0.731
+  Dog 67: 0.865
+  Dog 68: 0.954
+  Dog 70: 0.778
+  Dog 72: 0.969
+  Dog 73: 0.992
+  Dog 74: 0.963
+
+Selecting features for SVM ...
+  Using 23/45 folds for SVM feature selection (fraction=0.50)
+  Step 1: evaluating 10 candidates
+    Selected feature index 17 (score=0.743)
+  Step 2: evaluating 9 candidates
+    Selected feature index 0 (score=0.875)
+  Step 3: evaluating 8 candidates
+    Selected feature index 4 (score=0.899)
+  Step 4: evaluating 7 candidates
+    Selected feature index 21 (score=0.909)
+  Step 5: evaluating 6 candidates
+    Selected feature index 25 (score=0.912)
+  Step 6: evaluating 5 candidates
+    Selected feature index 18 (score=0.915)
+  Step 7: evaluating 4 candidates
+    Selected feature index 2 (score=0.916)
+  Step 8: evaluating 3 candidates
+    Selected feature index 16 (score=0.918)
+    Reached MAX_SELECTED_FEATURES=8; stopping search.
+Selected 8 features: ['AY5', 'ATotAct', 'AOffset', 'AZ2', 'AZ6', 'AY6', 'AMeanY', 'AY4']
+Back [A only] - SVM: Acc=0.925, F1_macro=0.927
+Per-dog accuracy:
+  Dog 16: 0.970
+  Dog 18: 0.903
+  Dog 19: 0.842
+  Dog 20: 0.927
+  Dog 21: 0.911
+  Dog 22: 0.919
+  Dog 23: 0.944
+  Dog 25: 0.973
+  Dog 26: 0.987
+  Dog 27: 0.977
+  Dog 28: 0.966
+  Dog 29: 0.917
+  Dog 30: 0.806
+  Dog 33: 0.851
+  Dog 34: 0.977
+  Dog 36: 0.958
+  Dog 39: 0.804
+  Dog 41: 0.957
+  Dog 43: 0.980
+  Dog 44: 0.966
+  Dog 45: 0.898
+  Dog 46: 0.965
+  Dog 47: 0.929
+  Dog 48: 0.954
+  Dog 49: 0.855
+  Dog 51: 0.744
+  Dog 52: 0.791
+  Dog 53: 0.979
+  Dog 54: 0.963
+  Dog 55: 0.862
+  Dog 56: 0.996
+  Dog 57: 0.902
+  Dog 58: 0.954
+  Dog 59: 0.957
+  Dog 60: 0.969
+  Dog 61: 0.970
+  Dog 63: 0.909
+  Dog 65: 0.993
+  Dog 66: 0.737
+  Dog 67: 0.909
+  Dog 68: 0.953
+  Dog 70: 0.818
+  Dog 72: 0.994
+  Dog 73: 0.994
+  Dog 74: 0.971
+
+Selecting features for Tree ...
+  Step 1: evaluating 16 candidates
+    Selected feature index 17 (score=0.751)
+  Step 2: evaluating 15 candidates
+    Selected feature index 5 (score=0.874)
+  Step 3: evaluating 14 candidates
+    Selected feature index 4 (score=0.879)
+  Step 4: evaluating 13 candidates
+    Selected feature index 24 (score=0.895)
+  Step 5: evaluating 12 candidates
+    Selected feature index 18 (score=0.901)
+  Step 6: evaluating 11 candidates
+Selected 5 features: ['AY5', 'ANMeanCros', 'AOffset', 'AZ5', 'AY6']
+Back [A only] - Tree: Acc=0.901, F1_macro=0.897
+Per-dog accuracy:
+  Dog 16: 0.923
+  Dog 18: 0.978
+  Dog 19: 0.830
+  Dog 20: 0.912
+  Dog 21: 0.905
+  Dog 22: 0.921
+  Dog 23: 0.921
+  Dog 25: 0.960
+  Dog 26: 0.977
+  Dog 27: 0.982
+  Dog 28: 0.959
+  Dog 29: 0.956
+  Dog 30: 0.736
+  Dog 33: 0.853
+  Dog 34: 0.961
+  Dog 36: 0.960
+  Dog 39: 0.734
+  Dog 41: 0.925
+  Dog 43: 0.976
+  Dog 44: 0.954
+  Dog 45: 0.907
+  Dog 46: 0.899
+  Dog 47: 0.892
+  Dog 48: 0.926
+  Dog 49: 0.801
+  Dog 51: 0.710
+  Dog 52: 0.746
+  Dog 53: 0.867
+  Dog 54: 0.951
+  Dog 55: 0.854
+  Dog 56: 0.993
+  Dog 57: 0.884
+  Dog 58: 0.956
+  Dog 59: 0.923
+  Dog 60: 0.934
+  Dog 61: 0.912
+  Dog 63: 0.861
+  Dog 65: 0.991
+  Dog 66: 0.698
+  Dog 67: 0.863
+  Dog 68: 0.921
+  Dog 70: 0.796
+  Dog 72: 0.942
+  Dog 73: 0.951
+  Dog 74: 0.963
+
+=== Sensor: Neck | Scenario: A+G ===
+ReliefF candidate pool size: 22
+  Optimal tree max_leaf_nodes=110 (cv acc=0.731)
+
+Selecting features for LDA ...
+  Step 1: evaluating 22 candidates
+    Selected feature index 18 (score=0.516)
+  Step 2: evaluating 21 candidates
+    Selected feature index 0 (score=0.624)
+  Step 3: evaluating 20 candidates
+    Selected feature index 4 (score=0.700)
+  Step 4: evaluating 19 candidates
+    Selected feature index 5 (score=0.711)
+  Step 5: evaluating 18 candidates
+    Selected feature index 21 (score=0.715)
+  Step 6: evaluating 17 candidates
+    Selected feature index 2 (score=0.717)
+  Step 7: evaluating 16 candidates
+    Selected feature index 20 (score=0.719)
+  Step 8: evaluating 15 candidates
+    Selected feature index 14 (score=0.720)
+  Step 9: evaluating 14 candidates
+    Selected feature index 15 (score=0.720)
+  Step 10: evaluating 13 candidates
+    Selected feature index 27 (score=0.721)
+    Reached MAX_SELECTED_FEATURES=10; stopping search.
+Selected 10 features: ['AY6', 'ATotAct', 'AOffset', 'ANMeanCros', 'AZ2', 'AMeanY', 'AZ1', 'AY2', 'AY3', 'GTotAct']
+Neck [A+G] - LDA: Acc=0.721, F1_macro=0.761
+Per-dog accuracy:
+  Dog 16: 0.768
+  Dog 18: 0.663
+  Dog 19: 0.690
+  Dog 20: 0.626
+  Dog 21: 0.740
+  Dog 22: 0.608
+  Dog 23: 0.637
+  Dog 25: 0.654
+  Dog 26: 0.740
+  Dog 27: 0.696
+  Dog 28: 0.613
+  Dog 29: 0.730
+  Dog 30: 0.926
+  Dog 33: 0.737
+  Dog 34: 0.790
+  Dog 36: 0.679
+  Dog 39: 0.724
+  Dog 41: 0.604
+  Dog 43: 0.812
+  Dog 44: 0.698
+  Dog 45: 0.872
+  Dog 46: 0.629
+  Dog 47: 0.741
+  Dog 48: 0.768
+  Dog 49: 0.849
+  Dog 51: 0.665
+  Dog 52: 0.613
+  Dog 53: 0.594
+  Dog 54: 0.793
+  Dog 55: 0.751
+  Dog 56: 0.667
+  Dog 57: 0.694
+  Dog 58: 0.834
+  Dog 59: 0.824
+  Dog 60: 0.499
+  Dog 61: 0.731
+  Dog 63: 0.604
+  Dog 65: 0.582
+  Dog 66: 0.640
+  Dog 67: 0.781
+  Dog 68: 0.720
+  Dog 70: 0.713
+  Dog 72: 0.631
+  Dog 73: 0.822
+  Dog 74: 0.671
+
+Selecting features for QDA ...
+  Step 1: evaluating 22 candidates
+    Selected feature index 18 (score=0.554)
+  Step 2: evaluating 21 candidates
+    Selected feature index 0 (score=0.669)
+  Step 3: evaluating 20 candidates
+    Selected feature index 1 (score=0.699)
+  Step 4: evaluating 19 candidates
+    Selected feature index 11 (score=0.706)
+  Step 5: evaluating 18 candidates
+    Selected feature index 5 (score=0.709)
+  Step 6: evaluating 17 candidates
+    Selected feature index 21 (score=0.712)
+  Step 7: evaluating 16 candidates
+    Selected feature index 27 (score=0.714)
+  Step 8: evaluating 15 candidates
+    Selected feature index 19 (score=0.715)
+  Step 9: evaluating 14 candidates
+Selected 8 features: ['AY6', 'ATotAct', 'AMeanX', 'AX6', 'ANMeanCros', 'AZ2', 'GTotAct', 'AY7']
+Neck [A+G] - QDA: Acc=0.715, F1_macro=0.737
+Per-dog accuracy:
+  Dog 16: 0.799
+  Dog 18: 0.712
+  Dog 19: 0.638
+  Dog 20: 0.746
+  Dog 21: 0.714
+  Dog 22: 0.665
+  Dog 23: 0.661
+  Dog 25: 0.609
+  Dog 26: 0.682
+  Dog 27: 0.665
+  Dog 28: 0.608
+  Dog 29: 0.884
+  Dog 30: 0.823
+  Dog 33: 0.750
+  Dog 34: 0.806
+  Dog 36: 0.622
+  Dog 39: 0.632
+  Dog 41: 0.564
+  Dog 43: 0.754
+  Dog 44: 0.710
+  Dog 45: 0.865
+  Dog 46: 0.630
+  Dog 47: 0.792
+  Dog 48: 0.637
+  Dog 49: 0.852
+  Dog 51: 0.650
+  Dog 52: 0.598
+  Dog 53: 0.622
+  Dog 54: 0.721
+  Dog 55: 0.776
+  Dog 56: 0.658
+  Dog 57: 0.608
+  Dog 58: 0.850
+  Dog 59: 0.773
+  Dog 60: 0.685
+  Dog 61: 0.790
+  Dog 63: 0.630
+  Dog 65: 0.526
+  Dog 66: 0.664
+  Dog 67: 0.775
+  Dog 68: 0.763
+  Dog 70: 0.727
+  Dog 72: 0.643
+  Dog 73: 0.800
+  Dog 74: 0.662
+
+Selecting features for SVM ...
+  Using 23/45 folds for SVM feature selection (fraction=0.50)
+  Step 1: evaluating 12 candidates
+    Selected feature index 18 (score=0.592)
+  Step 2: evaluating 11 candidates
+    Selected feature index 0 (score=0.694)
+  Step 3: evaluating 10 candidates
+    Selected feature index 4 (score=0.746)
+  Step 4: evaluating 9 candidates
+    Selected feature index 21 (score=0.757)
+  Step 5: evaluating 8 candidates
+    Selected feature index 14 (score=0.765)
+  Step 6: evaluating 7 candidates
+    Selected feature index 17 (score=0.766)
+  Step 7: evaluating 6 candidates
+    Selected feature index 27 (score=0.767)
+  Step 8: evaluating 5 candidates
+    Selected feature index 15 (score=0.768)
+  Step 9: evaluating 4 candidates
+    Selected feature index 2 (score=0.769)
+  Step 10: evaluating 3 candidates
+    Selected feature index 16 (score=0.769)
+    Reached MAX_SELECTED_FEATURES=10; stopping search.
+Selected 10 features: ['AY6', 'ATotAct', 'AOffset', 'AZ2', 'AY2', 'AY5', 'GTotAct', 'AY3', 'AMeanY', 'AY4']
+Neck [A+G] - SVM: Acc=0.763, F1_macro=0.795
+Per-dog accuracy:
+  Dog 16: 0.780
+  Dog 18: 0.707
+  Dog 19: 0.661
+  Dog 20: 0.797
+  Dog 21: 0.717
+  Dog 22: 0.697
+  Dog 23: 0.693
+  Dog 25: 0.708
+  Dog 26: 0.697
+  Dog 27: 0.676
+  Dog 28: 0.639
+  Dog 29: 0.932
+  Dog 30: 0.904
+  Dog 33: 0.777
+  Dog 34: 0.828
+  Dog 36: 0.673
+  Dog 39: 0.743
+  Dog 41: 0.569
+  Dog 43: 0.815
+  Dog 44: 0.734
+  Dog 45: 0.903
+  Dog 46: 0.688
+  Dog 47: 0.805
+  Dog 48: 0.922
+  Dog 49: 0.879
+  Dog 51: 0.824
+  Dog 52: 0.616
+  Dog 53: 0.700
+  Dog 54: 0.819
+  Dog 55: 0.803
+  Dog 56: 0.687
+  Dog 57: 0.627
+  Dog 58: 0.923
+  Dog 59: 0.789
+  Dog 60: 0.712
+  Dog 61: 0.800
+  Dog 63: 0.625
+  Dog 65: 0.524
+  Dog 66: 0.657
+  Dog 67: 0.783
+  Dog 68: 0.839
+  Dog 70: 0.746
+  Dog 72: 0.695
+  Dog 73: 0.953
+  Dog 74: 0.687
+
+Selecting features for Tree ...
+  Step 1: evaluating 22 candidates
+    Selected feature index 18 (score=0.561)
+  Step 2: evaluating 21 candidates
+    Selected feature index 0 (score=0.666)
+  Step 3: evaluating 20 candidates
+    Selected feature index 4 (score=0.714)
+  Step 4: evaluating 19 candidates
+    Selected feature index 22 (score=0.732)
+  Step 5: evaluating 18 candidates
+    Selected feature index 27 (score=0.735)
+  Step 6: evaluating 17 candidates
+    Selected feature index 14 (score=0.739)
+  Step 7: evaluating 16 candidates
+    Selected feature index 16 (score=0.740)
+  Step 8: evaluating 15 candidates
+    Selected feature index 19 (score=0.740)
+  Step 9: evaluating 14 candidates
+Selected 8 features: ['AY6', 'ATotAct', 'AOffset', 'AZ3', 'GTotAct', 'AY2', 'AY4', 'AY7']
+Neck [A+G] - Tree: Acc=0.740, F1_macro=0.772
+Per-dog accuracy:
+  Dog 16: 0.784
+  Dog 18: 0.782
+  Dog 19: 0.671
+  Dog 20: 0.769
+  Dog 21: 0.718
+  Dog 22: 0.693
+  Dog 23: 0.691
+  Dog 25: 0.657
+  Dog 26: 0.714
+  Dog 27: 0.697
+  Dog 28: 0.607
+  Dog 29: 0.856
+  Dog 30: 0.775
+  Dog 33: 0.755
+  Dog 34: 0.788
+  Dog 36: 0.476
+  Dog 39: 0.780
+  Dog 41: 0.631
+  Dog 43: 0.814
+  Dog 44: 0.692
+  Dog 45: 0.825
+  Dog 46: 0.682
+  Dog 47: 0.832
+  Dog 48: 0.718
+  Dog 49: 0.879
+  Dog 51: 0.671
+  Dog 52: 0.624
+  Dog 53: 0.675
+  Dog 54: 0.761
+  Dog 55: 0.845
+  Dog 56: 0.661
+  Dog 57: 0.647
+  Dog 58: 0.810
+  Dog 59: 0.824
+  Dog 60: 0.660
+  Dog 61: 0.715
+  Dog 63: 0.614
+  Dog 65: 0.618
+  Dog 66: 0.708
+  Dog 67: 0.810
+  Dog 68: 0.843
+  Dog 70: 0.758
+  Dog 72: 0.716
+  Dog 73: 0.951
+  Dog 74: 0.658
+
+=== Sensor: Neck | Scenario: A only ===
+ReliefF candidate pool size: 16
+  Optimal tree max_leaf_nodes=60 (cv acc=0.728)
+
+Selecting features for LDA ...
+  Step 1: evaluating 16 candidates
+    Selected feature index 18 (score=0.516)
+  Step 2: evaluating 15 candidates
+    Selected feature index 0 (score=0.624)
+  Step 3: evaluating 14 candidates
+    Selected feature index 4 (score=0.700)
+  Step 4: evaluating 13 candidates
+    Selected feature index 21 (score=0.703)
+  Step 5: evaluating 12 candidates
+    Selected feature index 17 (score=0.704)
+  Step 6: evaluating 11 candidates
+Selected 5 features: ['AY6', 'ATotAct', 'AOffset', 'AZ2', 'AY5']
+Neck [A only] - LDA: Acc=0.704, F1_macro=0.726
+Per-dog accuracy:
+  Dog 16: 0.748
+  Dog 18: 0.643
+  Dog 19: 0.692
+  Dog 20: 0.596
+  Dog 21: 0.714
+  Dog 22: 0.607
+  Dog 23: 0.626
+  Dog 25: 0.566
+  Dog 26: 0.759
+  Dog 27: 0.674
+  Dog 28: 0.605
+  Dog 29: 0.745
+  Dog 30: 0.910
+  Dog 33: 0.731
+  Dog 34: 0.790
+  Dog 36: 0.644
+  Dog 39: 0.690
+  Dog 41: 0.587
+  Dog 43: 0.791
+  Dog 44: 0.683
+  Dog 45: 0.859
+  Dog 46: 0.609
+  Dog 47: 0.718
+  Dog 48: 0.756
+  Dog 49: 0.823
+  Dog 51: 0.640
+  Dog 52: 0.613
+  Dog 53: 0.593
+  Dog 54: 0.802
+  Dog 55: 0.752
+  Dog 56: 0.668
+  Dog 57: 0.672
+  Dog 58: 0.840
+  Dog 59: 0.811
+  Dog 60: 0.508
+  Dog 61: 0.679
+  Dog 63: 0.575
+  Dog 65: 0.551
+  Dog 66: 0.623
+  Dog 67: 0.788
+  Dog 68: 0.695
+  Dog 70: 0.630
+  Dog 72: 0.630
+  Dog 73: 0.820
+  Dog 74: 0.667
+
+Selecting features for QDA ...
+  Step 1: evaluating 16 candidates
+    Selected feature index 18 (score=0.554)
+  Step 2: evaluating 15 candidates
+    Selected feature index 0 (score=0.669)
+  Step 3: evaluating 14 candidates
+    Selected feature index 1 (score=0.699)
+  Step 4: evaluating 13 candidates
+Selected 3 features: ['AY6', 'ATotAct', 'AMeanX']
+Neck [A only] - QDA: Acc=0.699, F1_macro=0.714
+Per-dog accuracy:
+  Dog 16: 0.799
+  Dog 18: 0.703
+  Dog 19: 0.656
+  Dog 20: 0.679
+  Dog 21: 0.694
+  Dog 22: 0.569
+  Dog 23: 0.661
+  Dog 25: 0.555
+  Dog 26: 0.689
+  Dog 27: 0.669
+  Dog 28: 0.572
+  Dog 29: 0.695
+  Dog 30: 0.897
+  Dog 33: 0.739
+  Dog 34: 0.795
+  Dog 36: 0.616
+  Dog 39: 0.759
+  Dog 41: 0.614
+  Dog 43: 0.737
+  Dog 44: 0.743
+  Dog 45: 0.884
+  Dog 46: 0.642
+  Dog 47: 0.697
+  Dog 48: 0.608
+  Dog 49: 0.765
+  Dog 51: 0.678
+  Dog 52: 0.604
+  Dog 53: 0.627
+  Dog 54: 0.747
+  Dog 55: 0.728
+  Dog 56: 0.655
+  Dog 57: 0.613
+  Dog 58: 0.738
+  Dog 59: 0.770
+  Dog 60: 0.546
+  Dog 61: 0.771
+  Dog 63: 0.602
+  Dog 65: 0.526
+  Dog 66: 0.580
+  Dog 67: 0.791
+  Dog 68: 0.646
+  Dog 70: 0.737
+  Dog 72: 0.618
+  Dog 73: 0.892
+  Dog 74: 0.663

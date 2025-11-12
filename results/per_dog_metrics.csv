@@ -1,0 +1,631 @@
+sensor,scenario,model,dog_id,accuracy
+Back,A+G,LDA,16,0.942
+Back,A+G,LDA,18,0.89
+Back,A+G,LDA,19,0.775
+Back,A+G,LDA,20,0.892
+Back,A+G,LDA,21,0.888
+Back,A+G,LDA,22,0.891
+Back,A+G,LDA,23,0.961
+Back,A+G,LDA,25,0.971
+Back,A+G,LDA,26,0.959
+Back,A+G,LDA,27,0.949
+Back,A+G,LDA,28,0.942
+Back,A+G,LDA,29,0.847
+Back,A+G,LDA,30,0.771
+Back,A+G,LDA,33,0.812
+Back,A+G,LDA,34,0.895
+Back,A+G,LDA,36,0.951
+Back,A+G,LDA,39,0.832
+Back,A+G,LDA,41,0.973
+Back,A+G,LDA,43,0.977
+Back,A+G,LDA,44,0.82
+Back,A+G,LDA,45,0.908
+Back,A+G,LDA,46,0.887
+Back,A+G,LDA,47,0.837
+Back,A+G,LDA,48,0.953
+Back,A+G,LDA,49,0.807
+Back,A+G,LDA,51,0.574
+Back,A+G,LDA,52,0.795
+Back,A+G,LDA,53,0.883
+Back,A+G,LDA,54,0.96
+Back,A+G,LDA,55,0.82
+Back,A+G,LDA,56,0.98
+Back,A+G,LDA,57,0.854
+Back,A+G,LDA,58,0.964
+Back,A+G,LDA,59,0.969
+Back,A+G,LDA,60,0.986
+Back,A+G,LDA,61,0.815
+Back,A+G,LDA,63,0.928
+Back,A+G,LDA,65,0.998
+Back,A+G,LDA,66,0.734
+Back,A+G,LDA,67,0.892
+Back,A+G,LDA,68,0.826
+Back,A+G,LDA,70,0.806
+Back,A+G,LDA,72,0.985
+Back,A+G,LDA,73,0.994
+Back,A+G,LDA,74,0.931
+Back,A+G,QDA,16,0.964
+Back,A+G,QDA,18,0.937
+Back,A+G,QDA,19,0.773
+Back,A+G,QDA,20,0.909
+Back,A+G,QDA,21,0.886
+Back,A+G,QDA,22,0.901
+Back,A+G,QDA,23,0.98
+Back,A+G,QDA,25,0.961
+Back,A+G,QDA,26,0.93
+Back,A+G,QDA,27,0.979
+Back,A+G,QDA,28,0.976
+Back,A+G,QDA,29,0.874
+Back,A+G,QDA,30,0.848
+Back,A+G,QDA,33,0.789
+Back,A+G,QDA,34,0.897
+Back,A+G,QDA,36,0.92
+Back,A+G,QDA,39,0.694
+Back,A+G,QDA,41,0.842
+Back,A+G,QDA,43,0.978
+Back,A+G,QDA,44,0.962
+Back,A+G,QDA,45,0.911
+Back,A+G,QDA,46,0.886
+Back,A+G,QDA,47,0.866
+Back,A+G,QDA,48,0.946
+Back,A+G,QDA,49,0.843
+Back,A+G,QDA,51,0.716
+Back,A+G,QDA,52,0.785
+Back,A+G,QDA,53,0.883
+Back,A+G,QDA,54,0.951
+Back,A+G,QDA,55,0.848
+Back,A+G,QDA,56,0.994
+Back,A+G,QDA,57,0.878
+Back,A+G,QDA,58,0.946
+Back,A+G,QDA,59,0.938
+Back,A+G,QDA,60,0.96
+Back,A+G,QDA,61,0.96
+Back,A+G,QDA,63,0.903
+Back,A+G,QDA,65,0.988
+Back,A+G,QDA,66,0.756
+Back,A+G,QDA,67,0.895
+Back,A+G,QDA,68,0.91
+Back,A+G,QDA,70,0.768
+Back,A+G,QDA,72,0.985
+Back,A+G,QDA,73,0.951
+Back,A+G,QDA,74,0.918
+Back,A+G,SVM,16,0.973
+Back,A+G,SVM,18,0.991
+Back,A+G,SVM,19,0.888
+Back,A+G,SVM,20,0.933
+Back,A+G,SVM,21,0.923
+Back,A+G,SVM,22,0.945
+Back,A+G,SVM,23,0.961
+Back,A+G,SVM,25,0.965
+Back,A+G,SVM,26,0.986
+Back,A+G,SVM,27,0.983
+Back,A+G,SVM,28,0.975
+Back,A+G,SVM,29,0.955
+Back,A+G,SVM,30,0.824
+Back,A+G,SVM,33,0.879
+Back,A+G,SVM,34,0.977
+Back,A+G,SVM,36,0.964
+Back,A+G,SVM,39,0.815
+Back,A+G,SVM,41,0.967
+Back,A+G,SVM,43,0.979
+Back,A+G,SVM,44,0.866
+Back,A+G,SVM,45,0.902
+Back,A+G,SVM,46,0.977
+Back,A+G,SVM,47,0.945
+Back,A+G,SVM,48,0.968
+Back,A+G,SVM,49,0.859
+Back,A+G,SVM,51,0.711
+Back,A+G,SVM,52,0.795
+Back,A+G,SVM,53,0.978
+Back,A+G,SVM,54,0.965
+Back,A+G,SVM,55,0.866
+Back,A+G,SVM,56,0.992
+Back,A+G,SVM,57,0.907
+Back,A+G,SVM,58,0.954
+Back,A+G,SVM,59,0.959
+Back,A+G,SVM,60,0.963
+Back,A+G,SVM,61,0.972
+Back,A+G,SVM,63,0.924
+Back,A+G,SVM,65,0.975
+Back,A+G,SVM,66,0.782
+Back,A+G,SVM,67,0.91
+Back,A+G,SVM,68,0.953
+Back,A+G,SVM,70,0.853
+Back,A+G,SVM,72,0.993
+Back,A+G,SVM,73,0.996
+Back,A+G,SVM,74,0.972
+Back,A+G,Tree,16,0.948
+Back,A+G,Tree,18,0.959
+Back,A+G,Tree,19,0.877
+Back,A+G,Tree,20,0.893
+Back,A+G,Tree,21,0.909
+Back,A+G,Tree,22,0.933
+Back,A+G,Tree,23,0.944
+Back,A+G,Tree,25,0.937
+Back,A+G,Tree,26,0.977
+Back,A+G,Tree,27,0.988
+Back,A+G,Tree,28,0.977
+Back,A+G,Tree,29,0.96
+Back,A+G,Tree,30,0.787
+Back,A+G,Tree,33,0.841
+Back,A+G,Tree,34,0.919
+Back,A+G,Tree,36,0.961
+Back,A+G,Tree,39,0.744
+Back,A+G,Tree,41,0.946
+Back,A+G,Tree,43,0.973
+Back,A+G,Tree,44,0.881
+Back,A+G,Tree,45,0.906
+Back,A+G,Tree,46,0.917
+Back,A+G,Tree,47,0.911
+Back,A+G,Tree,48,0.95
+Back,A+G,Tree,49,0.839
+Back,A+G,Tree,51,0.686
+Back,A+G,Tree,52,0.765
+Back,A+G,Tree,53,0.929
+Back,A+G,Tree,54,0.93
+Back,A+G,Tree,55,0.83
+Back,A+G,Tree,56,0.994
+Back,A+G,Tree,57,0.911
+Back,A+G,Tree,58,0.953
+Back,A+G,Tree,59,0.934
+Back,A+G,Tree,60,0.971
+Back,A+G,Tree,61,0.869
+Back,A+G,Tree,63,0.843
+Back,A+G,Tree,65,0.994
+Back,A+G,Tree,66,0.762
+Back,A+G,Tree,67,0.875
+Back,A+G,Tree,68,0.948
+Back,A+G,Tree,70,0.793
+Back,A+G,Tree,72,0.968
+Back,A+G,Tree,73,0.992
+Back,A+G,Tree,74,0.957
+Back,A only,LDA,16,0.923
+Back,A only,LDA,18,0.88
+Back,A only,LDA,19,0.772
+Back,A only,LDA,20,0.886
+Back,A only,LDA,21,0.888
+Back,A only,LDA,22,0.887
+Back,A only,LDA,23,0.96
+Back,A only,LDA,25,0.966
+Back,A only,LDA,26,0.962
+Back,A only,LDA,27,0.946
+Back,A only,LDA,28,0.943
+Back,A only,LDA,29,0.843
+Back,A only,LDA,30,0.771
+Back,A only,LDA,33,0.812
+Back,A only,LDA,34,0.89
+Back,A only,LDA,36,0.969
+Back,A only,LDA,39,0.823
+Back,A only,LDA,41,0.972
+Back,A only,LDA,43,0.979
+Back,A only,LDA,44,0.822
+Back,A only,LDA,45,0.905
+Back,A only,LDA,46,0.884
+Back,A only,LDA,47,0.836
+Back,A only,LDA,48,0.946
+Back,A only,LDA,49,0.778
+Back,A only,LDA,51,0.576
+Back,A only,LDA,52,0.794
+Back,A only,LDA,53,0.88
+Back,A only,LDA,54,0.951
+Back,A only,LDA,55,0.821
+Back,A only,LDA,56,0.977
+Back,A only,LDA,57,0.853
+Back,A only,LDA,58,0.964
+Back,A only,LDA,59,0.963
+Back,A only,LDA,60,0.98
+Back,A only,LDA,61,0.788
+Back,A only,LDA,63,0.928
+Back,A only,LDA,65,0.998
+Back,A only,LDA,66,0.737
+Back,A only,LDA,67,0.893
+Back,A only,LDA,68,0.822
+Back,A only,LDA,70,0.811
+Back,A only,LDA,72,0.982
+Back,A only,LDA,73,0.993
+Back,A only,LDA,74,0.918
+Back,A only,QDA,16,0.96
+Back,A only,QDA,18,0.983
+Back,A only,QDA,19,0.787
+Back,A only,QDA,20,0.894
+Back,A only,QDA,21,0.911
+Back,A only,QDA,22,0.944
+Back,A only,QDA,23,0.972
+Back,A only,QDA,25,0.963
+Back,A only,QDA,26,0.979
+Back,A only,QDA,27,0.945
+Back,A only,QDA,28,0.959
+Back,A only,QDA,29,0.916
+Back,A only,QDA,30,0.773
+Back,A only,QDA,33,0.826
+Back,A only,QDA,34,0.896
+Back,A only,QDA,36,0.957
+Back,A only,QDA,39,0.752
+Back,A only,QDA,41,0.958
+Back,A only,QDA,43,0.979
+Back,A only,QDA,44,0.805
+Back,A only,QDA,45,0.86
+Back,A only,QDA,46,0.942
+Back,A only,QDA,47,0.907
+Back,A only,QDA,48,0.956
+Back,A only,QDA,49,0.824
+Back,A only,QDA,51,0.72
+Back,A only,QDA,52,0.782
+Back,A only,QDA,53,0.966
+Back,A only,QDA,54,0.946
+Back,A only,QDA,55,0.859
+Back,A only,QDA,56,0.994
+Back,A only,QDA,57,0.884
+Back,A only,QDA,58,0.953
+Back,A only,QDA,59,0.95
+Back,A only,QDA,60,0.964
+Back,A only,QDA,61,0.865
+Back,A only,QDA,63,0.898
+Back,A only,QDA,65,0.991
+Back,A only,QDA,66,0.731
+Back,A only,QDA,67,0.865
+Back,A only,QDA,68,0.954
+Back,A only,QDA,70,0.778
+Back,A only,QDA,72,0.969
+Back,A only,QDA,73,0.992
+Back,A only,QDA,74,0.963
+Back,A only,SVM,16,0.97
+Back,A only,SVM,18,0.903
+Back,A only,SVM,19,0.842
+Back,A only,SVM,20,0.927
+Back,A only,SVM,21,0.911
+Back,A only,SVM,22,0.919
+Back,A only,SVM,23,0.944
+Back,A only,SVM,25,0.973
+Back,A only,SVM,26,0.987
+Back,A only,SVM,27,0.977
+Back,A only,SVM,28,0.966
+Back,A only,SVM,29,0.917
+Back,A only,SVM,30,0.806
+Back,A only,SVM,33,0.851
+Back,A only,SVM,34,0.977
+Back,A only,SVM,36,0.958
+Back,A only,SVM,39,0.804
+Back,A only,SVM,41,0.957
+Back,A only,SVM,43,0.98
+Back,A only,SVM,44,0.966
+Back,A only,SVM,45,0.898
+Back,A only,SVM,46,0.965
+Back,A only,SVM,47,0.929
+Back,A only,SVM,48,0.954
+Back,A only,SVM,49,0.855
+Back,A only,SVM,51,0.744
+Back,A only,SVM,52,0.791
+Back,A only,SVM,53,0.979
+Back,A only,SVM,54,0.963
+Back,A only,SVM,55,0.862
+Back,A only,SVM,56,0.996
+Back,A only,SVM,57,0.902
+Back,A only,SVM,58,0.954
+Back,A only,SVM,59,0.957
+Back,A only,SVM,60,0.969
+Back,A only,SVM,61,0.97
+Back,A only,SVM,63,0.909
+Back,A only,SVM,65,0.993
+Back,A only,SVM,66,0.737
+Back,A only,SVM,67,0.909
+Back,A only,SVM,68,0.953
+Back,A only,SVM,70,0.818
+Back,A only,SVM,72,0.994
+Back,A only,SVM,73,0.994
+Back,A only,SVM,74,0.971
+Back,A only,Tree,16,0.923
+Back,A only,Tree,18,0.978
+Back,A only,Tree,19,0.83
+Back,A only,Tree,20,0.912
+Back,A only,Tree,21,0.905
+Back,A only,Tree,22,0.921
+Back,A only,Tree,23,0.921
+Back,A only,Tree,25,0.96
+Back,A only,Tree,26,0.977
+Back,A only,Tree,27,0.982
+Back,A only,Tree,28,0.959
+Back,A only,Tree,29,0.956
+Back,A only,Tree,30,0.736
+Back,A only,Tree,33,0.853
+Back,A only,Tree,34,0.961
+Back,A only,Tree,36,0.96
+Back,A only,Tree,39,0.734
+Back,A only,Tree,41,0.925
+Back,A only,Tree,43,0.976
+Back,A only,Tree,44,0.954
+Back,A only,Tree,45,0.907
+Back,A only,Tree,46,0.899
+Back,A only,Tree,47,0.892
+Back,A only,Tree,48,0.926
+Back,A only,Tree,49,0.801
+Back,A only,Tree,51,0.71
+Back,A only,Tree,52,0.746
+Back,A only,Tree,53,0.867
+Back,A only,Tree,54,0.951
+Back,A only,Tree,55,0.854
+Back,A only,Tree,56,0.993
+Back,A only,Tree,57,0.884
+Back,A only,Tree,58,0.956
+Back,A only,Tree,59,0.923
+Back,A only,Tree,60,0.934
+Back,A only,Tree,61,0.912
+Back,A only,Tree,63,0.861
+Back,A only,Tree,65,0.991
+Back,A only,Tree,66,0.698
+Back,A only,Tree,67,0.863
+Back,A only,Tree,68,0.921
+Back,A only,Tree,70,0.796
+Back,A only,Tree,72,0.942
+Back,A only,Tree,73,0.951
+Back,A only,Tree,74,0.963
+Neck,A+G,LDA,16,0.768
+Neck,A+G,LDA,18,0.663
+Neck,A+G,LDA,19,0.69
+Neck,A+G,LDA,20,0.626
+Neck,A+G,LDA,21,0.74
+Neck,A+G,LDA,22,0.608
+Neck,A+G,LDA,23,0.637
+Neck,A+G,LDA,25,0.654
+Neck,A+G,LDA,26,0.74
+Neck,A+G,LDA,27,0.696
+Neck,A+G,LDA,28,0.613
+Neck,A+G,LDA,29,0.73
+Neck,A+G,LDA,30,0.926
+Neck,A+G,LDA,33,0.737
+Neck,A+G,LDA,34,0.79
+Neck,A+G,LDA,36,0.679
+Neck,A+G,LDA,39,0.724
+Neck,A+G,LDA,41,0.604
+Neck,A+G,LDA,43,0.812
+Neck,A+G,LDA,44,0.698
+Neck,A+G,LDA,45,0.872
+Neck,A+G,LDA,46,0.629
+Neck,A+G,LDA,47,0.741
+Neck,A+G,LDA,48,0.768
+Neck,A+G,LDA,49,0.849
+Neck,A+G,LDA,51,0.665
+Neck,A+G,LDA,52,0.613
+Neck,A+G,LDA,53,0.594
+Neck,A+G,LDA,54,0.793
+Neck,A+G,LDA,55,0.751
+Neck,A+G,LDA,56,0.667
+Neck,A+G,LDA,57,0.694
+Neck,A+G,LDA,58,0.834
+Neck,A+G,LDA,59,0.824
+Neck,A+G,LDA,60,0.499
+Neck,A+G,LDA,61,0.731
+Neck,A+G,LDA,63,0.604
+Neck,A+G,LDA,65,0.582
+Neck,A+G,LDA,66,0.64
+Neck,A+G,LDA,67,0.781
+Neck,A+G,LDA,68,0.72
+Neck,A+G,LDA,70,0.713
+Neck,A+G,LDA,72,0.631
+Neck,A+G,LDA,73,0.822
+Neck,A+G,LDA,74,0.671
+Neck,A+G,QDA,16,0.799
+Neck,A+G,QDA,18,0.712
+Neck,A+G,QDA,19,0.638
+Neck,A+G,QDA,20,0.746
+Neck,A+G,QDA,21,0.714
+Neck,A+G,QDA,22,0.665
+Neck,A+G,QDA,23,0.661
+Neck,A+G,QDA,25,0.609
+Neck,A+G,QDA,26,0.682
+Neck,A+G,QDA,27,0.665
+Neck,A+G,QDA,28,0.608
+Neck,A+G,QDA,29,0.884
+Neck,A+G,QDA,30,0.823
+Neck,A+G,QDA,33,0.75
+Neck,A+G,QDA,34,0.806
+Neck,A+G,QDA,36,0.622
+Neck,A+G,QDA,39,0.632
+Neck,A+G,QDA,41,0.564
+Neck,A+G,QDA,43,0.754
+Neck,A+G,QDA,44,0.71
+Neck,A+G,QDA,45,0.865
+Neck,A+G,QDA,46,0.63
+Neck,A+G,QDA,47,0.792
+Neck,A+G,QDA,48,0.637
+Neck,A+G,QDA,49,0.852
+Neck,A+G,QDA,51,0.65
+Neck,A+G,QDA,52,0.598
+Neck,A+G,QDA,53,0.622
+Neck,A+G,QDA,54,0.721
+Neck,A+G,QDA,55,0.776
+Neck,A+G,QDA,56,0.658
+Neck,A+G,QDA,57,0.608
+Neck,A+G,QDA,58,0.85
+Neck,A+G,QDA,59,0.773
+Neck,A+G,QDA,60,0.685
+Neck,A+G,QDA,61,0.79
+Neck,A+G,QDA,63,0.63
+Neck,A+G,QDA,65,0.526
+Neck,A+G,QDA,66,0.664
+Neck,A+G,QDA,67,0.775
+Neck,A+G,QDA,68,0.763
+Neck,A+G,QDA,70,0.727
+Neck,A+G,QDA,72,0.643
+Neck,A+G,QDA,73,0.8
+Neck,A+G,QDA,74,0.662
+Neck,A+G,SVM,16,0.78
+Neck,A+G,SVM,18,0.707
+Neck,A+G,SVM,19,0.661
+Neck,A+G,SVM,20,0.797
+Neck,A+G,SVM,21,0.717
+Neck,A+G,SVM,22,0.697
+Neck,A+G,SVM,23,0.693
+Neck,A+G,SVM,25,0.708
+Neck,A+G,SVM,26,0.697
+Neck,A+G,SVM,27,0.676
+Neck,A+G,SVM,28,0.639
+Neck,A+G,SVM,29,0.932
+Neck,A+G,SVM,30,0.904
+Neck,A+G,SVM,33,0.777
+Neck,A+G,SVM,34,0.828
+Neck,A+G,SVM,36,0.673
+Neck,A+G,SVM,39,0.743
+Neck,A+G,SVM,41,0.569
+Neck,A+G,SVM,43,0.815
+Neck,A+G,SVM,44,0.734
+Neck,A+G,SVM,45,0.903
+Neck,A+G,SVM,46,0.688
+Neck,A+G,SVM,47,0.805
+Neck,A+G,SVM,48,0.922
+Neck,A+G,SVM,49,0.879
+Neck,A+G,SVM,51,0.824
+Neck,A+G,SVM,52,0.616
+Neck,A+G,SVM,53,0.7
+Neck,A+G,SVM,54,0.819
+Neck,A+G,SVM,55,0.803
+Neck,A+G,SVM,56,0.687
+Neck,A+G,SVM,57,0.627
+Neck,A+G,SVM,58,0.923
+Neck,A+G,SVM,59,0.789
+Neck,A+G,SVM,60,0.712
+Neck,A+G,SVM,61,0.8
+Neck,A+G,SVM,63,0.625
+Neck,A+G,SVM,65,0.524
+Neck,A+G,SVM,66,0.657
+Neck,A+G,SVM,67,0.783
+Neck,A+G,SVM,68,0.839
+Neck,A+G,SVM,70,0.746
+Neck,A+G,SVM,72,0.695
+Neck,A+G,SVM,73,0.953
+Neck,A+G,SVM,74,0.687
+Neck,A+G,Tree,16,0.784
+Neck,A+G,Tree,18,0.782
+Neck,A+G,Tree,19,0.671
+Neck,A+G,Tree,20,0.769
+Neck,A+G,Tree,21,0.718
+Neck,A+G,Tree,22,0.693
+Neck,A+G,Tree,23,0.691
+Neck,A+G,Tree,25,0.657
+Neck,A+G,Tree,26,0.714
+Neck,A+G,Tree,27,0.697
+Neck,A+G,Tree,28,0.607
+Neck,A+G,Tree,29,0.856
+Neck,A+G,Tree,30,0.775
+Neck,A+G,Tree,33,0.755
+Neck,A+G,Tree,34,0.788
+Neck,A+G,Tree,36,0.476
+Neck,A+G,Tree,39,0.78
+Neck,A+G,Tree,41,0.631
+Neck,A+G,Tree,43,0.814
+Neck,A+G,Tree,44,0.692
+Neck,A+G,Tree,45,0.825
+Neck,A+G,Tree,46,0.682
+Neck,A+G,Tree,47,0.832
+Neck,A+G,Tree,48,0.718
+Neck,A+G,Tree,49,0.879
+Neck,A+G,Tree,51,0.671
+Neck,A+G,Tree,52,0.624
+Neck,A+G,Tree,53,0.675
+Neck,A+G,Tree,54,0.761
+Neck,A+G,Tree,55,0.845
+Neck,A+G,Tree,56,0.661
+Neck,A+G,Tree,57,0.647
+Neck,A+G,Tree,58,0.81
+Neck,A+G,Tree,59,0.824
+Neck,A+G,Tree,60,0.66
+Neck,A+G,Tree,61,0.715
+Neck,A+G,Tree,63,0.614
+Neck,A+G,Tree,65,0.618
+Neck,A+G,Tree,66,0.708
+Neck,A+G,Tree,67,0.81
+Neck,A+G,Tree,68,0.843
+Neck,A+G,Tree,70,0.758
+Neck,A+G,Tree,72,0.716
+Neck,A+G,Tree,73,0.951
+Neck,A+G,Tree,74,0.658
+Neck,A only,LDA,16,0.748
+Neck,A only,LDA,18,0.643
+Neck,A only,LDA,19,0.692
+Neck,A only,LDA,20,0.596
+Neck,A only,LDA,21,0.714
+Neck,A only,LDA,22,0.607
+Neck,A only,LDA,23,0.626
+Neck,A only,LDA,25,0.566
+Neck,A only,LDA,26,0.759
+Neck,A only,LDA,27,0.674
+Neck,A only,LDA,28,0.605
+Neck,A only,LDA,29,0.745
+Neck,A only,LDA,30,0.91
+Neck,A only,LDA,33,0.731
+Neck,A only,LDA,34,0.79
+Neck,A only,LDA,36,0.644
+Neck,A only,LDA,39,0.69
+Neck,A only,LDA,41,0.587
+Neck,A only,LDA,43,0.791
+Neck,A only,LDA,44,0.683
+Neck,A only,LDA,45,0.859
+Neck,A only,LDA,46,0.609
+Neck,A only,LDA,47,0.718
+Neck,A only,LDA,48,0.756
+Neck,A only,LDA,49,0.823
+Neck,A only,LDA,51,0.64
+Neck,A only,LDA,52,0.613
+Neck,A only,LDA,53,0.593
+Neck,A only,LDA,54,0.802
+Neck,A only,LDA,55,0.752
+Neck,A only,LDA,56,0.668
+Neck,A only,LDA,57,0.672
+Neck,A only,LDA,58,0.84
+Neck,A only,LDA,59,0.811
+Neck,A only,LDA,60,0.508
+Neck,A only,LDA,61,0.679
+Neck,A only,LDA,63,0.575
+Neck,A only,LDA,65,0.551
+Neck,A only,LDA,66,0.623
+Neck,A only,LDA,67,0.788
+Neck,A only,LDA,68,0.695
+Neck,A only,LDA,70,0.63
+Neck,A only,LDA,72,0.63
+Neck,A only,LDA,73,0.82
+Neck,A only,LDA,74,0.667
+Neck,A only,QDA,16,0.799
+Neck,A only,QDA,18,0.703
+Neck,A only,QDA,19,0.656
+Neck,A only,QDA,20,0.679
+Neck,A only,QDA,21,0.694
+Neck,A only,QDA,22,0.569
+Neck,A only,QDA,23,0.661
+Neck,A only,QDA,25,0.555
+Neck,A only,QDA,26,0.689
+Neck,A only,QDA,27,0.669
+Neck,A only,QDA,28,0.572
+Neck,A only,QDA,29,0.695
+Neck,A only,QDA,30,0.897
+Neck,A only,QDA,33,0.739
+Neck,A only,QDA,34,0.795
+Neck,A only,QDA,36,0.616
+Neck,A only,QDA,39,0.759
+Neck,A only,QDA,41,0.614
+Neck,A only,QDA,43,0.737
+Neck,A only,QDA,44,0.743
+Neck,A only,QDA,45,0.884
+Neck,A only,QDA,46,0.642
+Neck,A only,QDA,47,0.697
+Neck,A only,QDA,48,0.608
+Neck,A only,QDA,49,0.765
+Neck,A only,QDA,51,0.678
+Neck,A only,QDA,52,0.604
+Neck,A only,QDA,53,0.627
+Neck,A only,QDA,54,0.747
+Neck,A only,QDA,55,0.728
+Neck,A only,QDA,56,0.655
+Neck,A only,QDA,57,0.613
+Neck,A only,QDA,58,0.738
+Neck,A only,QDA,59,0.77
+Neck,A only,QDA,60,0.546
+Neck,A only,QDA,61,0.771
+Neck,A only,QDA,63,0.602
+Neck,A only,QDA,65,0.526
+Neck,A only,QDA,66,0.58
+Neck,A only,QDA,67,0.791
+Neck,A only,QDA,68,0.646
+Neck,A only,QDA,70,0.737
+Neck,A only,QDA,72,0.618
+Neck,A only,QDA,73,0.892
+Neck,A only,QDA,74,0.663

@@ -1,0 +1,15 @@
+sensor,scenario,model,num_features,selected_features,accuracy,f1_macro
+Back,A+G,LDA,10,AY5;ATotAct;AZ5;GTotAct;AY7;AOffset;AZ1;AZ2;AMeanZ;GY2,0.893,0.9
+Back,A+G,QDA,5,AY5;ATotAct;AZ1;AOffset;ANMeanCros,0.899,0.889
+Back,A+G,SVM,7,AY5;ATotAct;AOffset;AZ2;GTotAct;AZ6;GX2,0.933,0.928
+Back,A+G,Tree,8,AY5;ATotAct;AOffset;AZ6;GY2;AMeanZ;AZ7;AY7,0.909,0.913
+Back,A only,LDA,8,AY5;ATotAct;AZ5;AOffset;AZ1;AZ2;AMeanZ;AY6,0.889,0.897
+Back,A only,QDA,6,AY5;ATotAct;AMeanX;AZ2;ANMeanCros;AZ3,0.906,0.899
+Back,A only,SVM,8,AY5;ATotAct;AOffset;AZ2;AZ6;AY6;AMeanY;AY4,0.925,0.927
+Back,A only,Tree,5,AY5;ANMeanCros;AOffset;AZ5;AY6,0.901,0.897
+Neck,A+G,LDA,10,AY6;ATotAct;AOffset;ANMeanCros;AZ2;AMeanY;AZ1;AY2;AY3;GTotAct,0.721,0.761
+Neck,A+G,QDA,8,AY6;ATotAct;AMeanX;AX6;ANMeanCros;AZ2;GTotAct;AY7,0.715,0.737
+Neck,A+G,SVM,10,AY6;ATotAct;AOffset;AZ2;AY2;AY5;GTotAct;AY3;AMeanY;AY4,0.763,0.795
+Neck,A+G,Tree,8,AY6;ATotAct;AOffset;AZ3;GTotAct;AY2;AY4;AY7,0.74,0.772
+Neck,A only,LDA,5,AY6;ATotAct;AOffset;AZ2;AY5,0.704,0.726
+Neck,A only,QDA,3,AY6;ATotAct;AMeanX,0.699,0.714

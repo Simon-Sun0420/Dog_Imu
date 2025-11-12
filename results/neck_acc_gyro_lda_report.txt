@@ -1,0 +1,13 @@
+              precision    recall  f1-score   support
+
+   Galloping       0.92      0.92      0.92       777
+ Lying chest       0.54      0.33      0.41     11062
+     Sitting       0.59      0.60      0.59     10824
+    Sniffing       0.96      0.99      0.98      9331
+    Standing       0.58      0.86      0.69      9552
+    Trotting       0.98      0.96      0.97      6650
+     Walking       0.79      0.73      0.76      6407
+
+    accuracy                           0.72     54603
+   macro avg       0.77      0.77      0.76     54603
+weighted avg       0.72      0.72      0.71     54603
