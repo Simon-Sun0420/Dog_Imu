@@ -10,4 +10,4 @@ DogInfo.csv
 DogMoveData.csv
 DogMoveData.mat
 processed_dog_features.pkl
-
+.venv/
