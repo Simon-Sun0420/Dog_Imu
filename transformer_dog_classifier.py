@@ -32,8 +32,11 @@ import pandas as pd
 import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 from sklearn.model_selection import LeaveOneGroupOut
+import seaborn as sns
+import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 RESULTS_DIR = Path("results_transformer")
 DEFAULT_SUMMARY_CSV = RESULTS_DIR / "model_summary.csv"
@@ -286,7 +289,9 @@ def run_lodo_training(
     num_classes: int,
     args,
     model_type: str,
-) -> Tuple[float, float, Dict[int, float]]:
+    sensor: str,
+    scenario_label: str,
+) -> Tuple[float, float, Dict[int, float], np.ndarray, np.ndarray]:
     device = torch.device("cuda" if torch.cuda.is_available() and not args.cpu else "cpu")
     logo = LeaveOneGroupOut()
     all_true, all_pred, all_dog_ids = [], [], []
@@ -337,19 +342,29 @@ def run_lodo_training(
         )
         criterion = nn.CrossEntropyLoss(weight=class_weights_tensor)
 
-        for epoch in range(1, args.epochs + 1):
+        amp_enabled = args.amp and device.type == "cuda"
+        scaler = torch.cuda.amp.GradScaler(enabled=amp_enabled)
+
+        epoch_iter = tqdm(range(1, args.epochs + 1), desc=f"{model_type} {sensor} {scenario_label} Fold {fold_idx}", leave=False)
+        for epoch in epoch_iter:
             model.train()
+            running_loss = 0.0
             for xb, yb in train_loader:
                 xb, yb = xb.to(device), yb.to(device)
                 optimizer.zero_grad()
-                logits = model(xb)
-                loss = criterion(logits, yb)
-                loss.backward()
-                optimizer.step()
+                with torch.cuda.amp.autocast(enabled=amp_enabled):
+                    logits = model(xb)
+                    loss = criterion(logits, yb)
+                scaler.scale(loss).backward()
+                scaler.step(optimizer)
+                scaler.update()
+                running_loss += loss.item() * len(xb)
+            epoch_loss = running_loss / len(train_loader.dataset)
             if epoch % args.lr_decay_steps == 0:
                 scheduler.step()
             if args.verbose and epoch % args.log_interval == 0:
-                print(f"[Fold {fold_idx:02d}] Epoch {epoch:04d}/{args.epochs}")
+                print(f"[{model_type}] Fold {fold_idx} Epoch {epoch}/{args.epochs} Loss={epoch_loss:.4f}")
+            epoch_iter.set_postfix(loss=f"{epoch_loss:.4f}")
 
         model.eval()
         y_true_fold, y_pred_fold = [], []
@@ -366,6 +381,22 @@ def run_lodo_training(
         f1 = f1_score(y_true_fold, y_pred_fold, average="macro")
         print(f"[Fold {fold_idx:02d}] Dog {dog_id} - Acc={acc:.3f}, F1_macro={f1:.3f}")
 
+        if args.save_checkpoints:
+            ckpt_dir = Path(args.checkpoint_dir)
+            ckpt_dir.mkdir(parents=True, exist_ok=True)
+            ckpt_path = ckpt_dir / f"{sensor}_{scenario_label}_{model_type}_fold{fold_idx}.pt"
+            torch.save(
+                {
+                    "model_state": model.state_dict(),
+                    "model_type": model_type,
+                    "sensor": sensor,
+                    "scenario": scenario_label,
+                    "fold": fold_idx,
+                    "label_mapping": num_classes,
+                },
+                ckpt_path,
+            )
+
         all_true.append(y_true_fold)
         all_pred.append(y_pred_fold)
         all_dog_ids.append(dogs[test_idx])
@@ -377,7 +408,7 @@ def run_lodo_training(
     overall_f1 = f1_score(all_true, all_pred, average="macro")
     per_dog = {int(d): accuracy_score(all_true[all_dog_ids == d], all_pred[all_dog_ids == d]) for d in np.unique(all_dog_ids)}
     print(f"\nOverall: Acc={overall_acc:.3f}, F1_macro={overall_f1:.3f}")
-    return overall_acc, overall_f1, per_dog
+    return overall_acc, overall_f1, per_dog, all_true, all_pred
 
 
 def parse_list_arg(value: str, default: List[str], transform=lambda x: x) -> List[str]:
@@ -423,6 +454,25 @@ def append_results(summary_rows: List[Dict], dog_rows: List[Dict], summary_csv: 
         dog_df.to_csv(per_dog_csv, index=False)
 
 
+def save_confusion_matrix(sensor, scenario_key, model_name, class_names, labels_array, y_true, y_pred, out_dir):
+    out_dir.mkdir(parents=True, exist_ok=True)
+    cm = confusion_matrix(y_true, y_pred, labels=labels_array)
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names)
+    plt.title(f"{sensor} ({scenario_key}) - {model_name} Confusion Matrix")
+    plt.xlabel("Predicted")
+    plt.ylabel("True")
+    plt.tight_layout()
+    plt.savefig(out_dir / f"{sensor.lower()}_{scenario_key.lower()}_{model_name.lower()}_confusion.png")
+    plt.close()
+
+
+def save_classification_report(sensor, scenario_key, model_name, class_names, labels_array, y_true, y_pred, out_dir):
+    out_dir.mkdir(parents=True, exist_ok=True)
+    report = classification_report(y_true, y_pred, labels=labels_array, target_names=class_names)
+    (out_dir / f"{sensor.lower()}_{scenario_key.lower()}_{model_name.lower()}_report.txt").write_text(report)
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Transformer-based dog behaviour classifier.")
     parser.add_argument("--data", default="DogMoveData.csv", help="Path to raw DogMoveData CSV.")
@@ -442,6 +492,9 @@ def parse_args():
     parser.add_argument("--dropout", type=float, default=0.1, help="Dropout rate.")
     parser.add_argument("--models", default="TransformerLarge,TransformerSmall,ConvNet", help="Comma-separated model types to run.")
     parser.add_argument("--summary-dir", default="results_transformer", help="Directory to store summary/per-dog CSVs.")
+    parser.add_argument("--checkpoint-dir", default="transformer_checkpoints", help="Directory to store per-fold checkpoints.")
+    parser.add_argument("--save-checkpoints", action="store_true", help="Save model .pt after each fold.")
+    parser.add_argument("--amp", action="store_true", help="Enable torch.cuda.amp mixed-precision training.")
     parser.add_argument("--cpu", action="store_true", help="Force CPU even if CUDA is available.")
     parser.add_argument("--log-interval", type=int, default=50, dest="log_interval")
     parser.add_argument("--verbose", action="store_true")
@@ -478,13 +531,39 @@ def main():
             model_list = parse_list_arg(args.models, ["TransformerLarge"])
             for model_type in model_list:
                 print(f"\n>>> Training model={model_type} on sensor={sensor} scenario={SCENARIOS[scenario_key]['label']}")
-                acc, f1, per_dog = run_lodo_training(
+                acc, f1, per_dog, y_true_all, y_pred_all = run_lodo_training(
                     windows,
                     y,
                     dog_ids,
                     num_classes=len(label_encoder),
                     args=args,
                     model_type=model_type,
+                    sensor=sensor,
+                    scenario_label=SCENARIOS[scenario_key]["label"],
+                )
+
+                class_names = [lbl for lbl, _ in sorted(label_encoder.items(), key=lambda kv: kv[1])]
+                label_indices = list(range(len(class_names)))
+                summary_dir = Path(args.summary_dir)
+                save_confusion_matrix(
+                    sensor,
+                    scenario_key,
+                    model_type,
+                    class_names,
+                    label_indices,
+                    y_true_all,
+                    y_pred_all,
+                    summary_dir,
+                )
+                save_classification_report(
+                    sensor,
+                    scenario_key,
+                    model_type,
+                    class_names,
+                    label_indices,
+                    y_true_all,
+                    y_pred_all,
+                    summary_dir,
                 )
 
                 summary_rows.append(

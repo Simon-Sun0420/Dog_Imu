@@ -13,3 +13,5 @@ Neck,A+G,SVM,10,AY6;ATotAct;AOffset;AZ2;AY2;AY5;GTotAct;AY3;AMeanY;AY4,0.763,0.7
 Neck,A+G,Tree,8,AY6;ATotAct;AOffset;AZ3;GTotAct;AY2;AY4;AY7,0.74,0.772
 Neck,A only,LDA,5,AY6;ATotAct;AOffset;AZ2;AY5,0.704,0.726
 Neck,A only,QDA,3,AY6;ATotAct;AMeanX,0.699,0.714
+Neck,A only,SVM,8,AY6;ATotAct;AOffset;AY2;AMeanZ;AY4;AMeanY;AY3,0.754,0.788
+Neck,A only,Tree,6,AY6;ATotAct;AX5;AZ2;AY2;AMeanY,0.733,0.762

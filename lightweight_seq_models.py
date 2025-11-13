@@ -254,11 +254,11 @@ MODEL_FACTORY = {
 }
 
 
-def save_confusion(sensor, scenario_key, model_name, classes, y_true, y_pred, out_dir):
+def save_confusion(sensor, scenario_key, model_name, class_names, label_indices, y_true, y_pred, out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
-    cm = confusion_matrix(y_true, y_pred, labels=classes)
+    cm = confusion_matrix(y_true, y_pred, labels=label_indices)
     plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=classes, yticklabels=classes)
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names)
     plt.title(f"{sensor} ({scenario_key}) - {model_name} Confusion")
     plt.xlabel("Predicted")
     plt.ylabel("True")
@@ -267,9 +267,9 @@ def save_confusion(sensor, scenario_key, model_name, classes, y_true, y_pred, ou
     plt.close()
 
 
-def save_report(sensor, scenario_key, model_name, classes, y_true, y_pred, out_dir):
+def save_report(sensor, scenario_key, model_name, class_names, label_indices, y_true, y_pred, out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
-    report = classification_report(y_true, y_pred, labels=classes)
+    report = classification_report(y_true, y_pred, labels=label_indices, target_names=class_names)
     (out_dir / f"{sensor.lower()}_{scenario_key.lower()}_{model_name.lower()}_report.txt").write_text(report)
 
 
@@ -413,9 +413,10 @@ def main():
                 args.model, windows, y, dogs, len(label_map), args
             )
 
-            classes = list(label_map.keys())
-            save_confusion(sensor, scenario_key, args.model, classes, true_all, pred_all, base_dir)
-            save_report(sensor, scenario_key, args.model, classes, true_all, pred_all, base_dir)
+            class_names = list(label_map.keys())
+            label_indices = list(range(len(class_names)))
+            save_confusion(sensor, scenario_key, args.model, class_names, label_indices, true_all, pred_all, base_dir)
+            save_report(sensor, scenario_key, args.model, class_names, label_indices, true_all, pred_all, base_dir)
 
             scenario_label = SCENARIOS[scenario_key]["label"]
             summary_rows.append(

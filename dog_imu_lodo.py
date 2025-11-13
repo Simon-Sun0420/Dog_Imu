@@ -411,6 +411,9 @@ def main():
     RESULTS_DIR.mkdir(exist_ok=True)
     if SUMMARY_RECORDS:
         summary_df = pd.DataFrame(SUMMARY_RECORDS)
+        if SUMMARY_CSV.exists():
+            existing = pd.read_csv(SUMMARY_CSV)
+            summary_df = pd.concat([existing, summary_df], ignore_index=True)
         summary_df.to_csv(SUMMARY_CSV, index=False)
         try:
             summary_df.to_excel(SUMMARY_XLSX, index=False)
@@ -418,6 +421,9 @@ def main():
             print(f"Excel export skipped ({exc})")
     if DOG_RECORDS:
         dog_df = pd.DataFrame(DOG_RECORDS)
+        if PER_DOG_CSV.exists():
+            existing = pd.read_csv(PER_DOG_CSV)
+            dog_df = pd.concat([existing, dog_df], ignore_index=True)
         dog_df.to_csv(PER_DOG_CSV, index=False)
 
 

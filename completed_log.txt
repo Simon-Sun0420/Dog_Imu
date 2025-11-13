@@ -933,3 +933,139 @@ Per-dog accuracy:
   Dog 72: 0.618
   Dog 73: 0.892
   Dog 74: 0.663
+
+
+=== Sensor: Neck | Scenario: A only ===
+ReliefF candidate pool size: 16
+  Optimal tree max_leaf_nodes=60 (cv acc=0.728)
+
+Selecting features for SVM ...
+  Using 23/45 folds for SVM feature selection (fraction=0.50)
+  Step 1: evaluating 10 candidates
+    Selected feature index 18 (score=0.592)
+  Step 2: evaluating 9 candidates
+    Selected feature index 0 (score=0.694)
+  Step 3: evaluating 8 candidates
+    Selected feature index 4 (score=0.746)
+  Step 4: evaluating 7 candidates
+    Selected feature index 14 (score=0.755)
+  Step 5: evaluating 6 candidates
+    Selected feature index 3 (score=0.761)
+  Step 6: evaluating 5 candidates
+    Selected feature index 16 (score=0.762)
+  Step 7: evaluating 4 candidates
+    Selected feature index 2 (score=0.763)
+  Step 8: evaluating 3 candidates
+    Selected feature index 15 (score=0.764)
+    Reached MAX_SELECTED_FEATURES=8; stopping search.
+Selected 8 features: ['AY6', 'ATotAct', 'AOffset', 'AY2', 'AMeanZ', 'AY4', 'AMeanY', 'AY3']
+Neck [A only] - SVM: Acc=0.754, F1_macro=0.788
+Per-dog accuracy:
+  Dog 16: 0.771
+  Dog 18: 0.694
+  Dog 19: 0.660
+  Dog 20: 0.792
+  Dog 21: 0.719
+  Dog 22: 0.700
+  Dog 23: 0.695
+  Dog 25: 0.669
+  Dog 26: 0.705
+  Dog 27: 0.681
+  Dog 28: 0.649
+  Dog 29: 0.925
+  Dog 30: 0.901
+  Dog 33: 0.768
+  Dog 34: 0.815
+  Dog 36: 0.676
+  Dog 39: 0.670
+  Dog 41: 0.562
+  Dog 43: 0.814
+  Dog 44: 0.727
+  Dog 45: 0.902
+  Dog 46: 0.656
+  Dog 47: 0.815
+  Dog 48: 0.899
+  Dog 49: 0.870
+  Dog 51: 0.817
+  Dog 52: 0.612
+  Dog 53: 0.690
+  Dog 54: 0.823
+  Dog 55: 0.800
+  Dog 56: 0.700
+  Dog 57: 0.577
+  Dog 58: 0.906
+  Dog 59: 0.793
+  Dog 60: 0.725
+  Dog 61: 0.795
+  Dog 63: 0.634
+  Dog 65: 0.506
+  Dog 66: 0.659
+  Dog 67: 0.785
+  Dog 68: 0.844
+  Dog 70: 0.744
+  Dog 72: 0.683
+  Dog 73: 0.954
+  Dog 74: 0.683
+
+Selecting features for Tree ...
+  Step 1: evaluating 16 candidates
+    Selected feature index 18 (score=0.562)
+  Step 2: evaluating 15 candidates
+    Selected feature index 0 (score=0.673)
+  Step 3: evaluating 14 candidates
+    Selected feature index 10 (score=0.719)
+  Step 4: evaluating 13 candidates
+    Selected feature index 21 (score=0.725)
+  Step 5: evaluating 12 candidates
+    Selected feature index 14 (score=0.732)
+  Step 6: evaluating 11 candidates
+    Selected feature index 2 (score=0.733)
+  Step 7: evaluating 10 candidates
+Selected 6 features: ['AY6', 'ATotAct', 'AX5', 'AZ2', 'AY2', 'AMeanY']
+Neck [A only] - Tree: Acc=0.733, F1_macro=0.762
+Per-dog accuracy:
+  Dog 16: 0.794
+  Dog 18: 0.774
+  Dog 19: 0.645
+  Dog 20: 0.755
+  Dog 21: 0.677
+  Dog 22: 0.612
+  Dog 23: 0.731
+  Dog 25: 0.575
+  Dog 26: 0.778
+  Dog 27: 0.706
+  Dog 28: 0.640
+  Dog 29: 0.851
+  Dog 30: 0.758
+  Dog 33: 0.731
+  Dog 34: 0.798
+  Dog 36: 0.452
+  Dog 39: 0.723
+  Dog 41: 0.598
+  Dog 43: 0.739
+  Dog 44: 0.687
+  Dog 45: 0.950
+  Dog 46: 0.670
+  Dog 47: 0.786
+  Dog 48: 0.932
+  Dog 49: 0.789
+  Dog 51: 0.651
+  Dog 52: 0.570
+  Dog 53: 0.648
+  Dog 54: 0.758
+  Dog 55: 0.839
+  Dog 56: 0.631
+  Dog 57: 0.706
+  Dog 58: 0.729
+  Dog 59: 0.799
+  Dog 60: 0.670
+  Dog 61: 0.732
+  Dog 63: 0.593
+  Dog 65: 0.522
+  Dog 66: 0.654
+  Dog 67: 0.793
+  Dog 68: 0.751
+  Dog 70: 0.757
+  Dog 72: 0.641
+  Dog 73: 0.960
+  Dog 74: 0.683
